@@ -9,8 +9,13 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #000;
-    margin: 20px;
+    margin: auto;
     padding: 0;
+    width: 80dvw;
+
+    @media (min-width: 768px) {
+        width: 65dvw;
+    }
 }
 
 /* Typography */
@@ -21,7 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5em;
-    margin-top: 20px;
+    margin: 3rem auto 2rem auto;
+    color: white;
+    padding-left: 1rem;
+    background-color: #000;
 }
 
 h2 {
@@ -62,8 +70,11 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffba;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.505);
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
 }
 
 /* Lists */
@@ -126,13 +137,11 @@ th {
 
 /* Navbar styles */
 .navbar {
-    background-color: #f0f0f0; /* Light gray background for contrast */
     color: #000; /* Black text color */
     position: sticky;
-    top: 0;
+    top: 1rem;
     z-index: 1000;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -140,7 +149,7 @@ th {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 10px 20px;
 }
 
@@ -149,13 +158,17 @@ th {
     list-style: none;
     display: none; /* Hidden by default for mobile */
     flex-direction: column; /* Stack items vertically */
-    background-color: #f0f0f0; /* Same as navbar */
+    background-color: #ffffff; /* Same as navbar */
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.465);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: rgba(255, 255, 255, 0.733) solid 1px;
 }
 
 .nav-links.active {
@@ -187,9 +200,11 @@ th {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f0f0f0; /* Light gray dropdown */
+    background-color: #cecece; /* Light gray dropdown */
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .dropdown-menu li {
@@ -215,3 +230,35 @@ th {
     cursor: pointer;
 }
 
+.brand-logo {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    margin: 5rem auto 0px auto;
+    height: 10rem;
+    padding: 5rem;
+    position: relative;
+    bottom: 0;
+}
+
+figure {
+    text-align: center;
+    margin: 3rem auto 6rem auto;
+
+    & img {
+        max-width: 60dvw;
+        max-height: 80dvh;
+        margin: auto;
+    }
+
+    & figcaption {
+        margin: 1rem auto auto auto;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
